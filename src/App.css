@@ -1,95 +1,28 @@
-/* General application container styling */
 .app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
-  padding: 20px;
 }
 
-/* Header section styling */
-header {
-  width: 100%;
-  padding: 20px;
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+.main-content {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* Health Monitoring section */
-.health-monitoring {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
+.cow-inventory-container,
+.form-container {
+  width: 45%;
 }
 
-.health-monitoring h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
-  font-weight: bold;
-}
-
-.health-monitoring .form-group {
-  margin-bottom: 20px;
-}
-
-.health-monitoring label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-}
-
-.health-monitoring select,
-.health-monitoring input[type="date"] {
-  padding: 8px;
-  font-size: 16px;
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.health-monitoring button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.health-monitoring button:hover {
-  background-color: #45a049;
-}
-
-.health-monitoring ul {
+.cow-inventory ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
 
-.health-monitoring li {
-  padding: 5px 0;
-  border-bottom: 1px solid #ddd;
-  font-size: 16px;
+.cow-inventory li {
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.health-monitoring li:last-child {
-  border-bottom: none;
-}
-
-.health-monitoring .no-records {
-  font-size: 16px;
-  color: #888;
+.add-cow-form label {
+  display: block;
+  margin-bottom: 10px;
 }
