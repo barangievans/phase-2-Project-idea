@@ -1,0 +1,24 @@
+.cow-inventory-container {
+    padding: 20px;
+  }
+  
+  .cow-inventory-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cow-inventory-container th, .cow-inventory-container td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .cow-inventory-container th {
+    background-color: #f4f4f4;
+  }
+  
+  .cow-inventory-container tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
