@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/phase-2-Project-idea/static/css/main.52c18123.css",
-    "main.js": "/phase-2-Project-idea/static/js/main.778723e4.js",
-    "index.html": "/phase-2-Project-idea/index.html",
-    "main.52c18123.css.map": "/phase-2-Project-idea/static/css/main.52c18123.css.map",
-    "main.778723e4.js.map": "/phase-2-Project-idea/static/js/main.778723e4.js.map"
+    "main.css": "/dairy-cow-management/static/css/main.ddb60fc0.chunk.css",
+    "main.js": "/dairy-cow-management/static/js/main.b955bc2d.chunk.js",
+    "main.js.map": "/dairy-cow-management/static/js/main.b955bc2d.chunk.js.map",
+    "runtime-main.js": "/dairy-cow-management/static/js/runtime-main.91cbd1c8.js",
+    "runtime-main.js.map": "/dairy-cow-management/static/js/runtime-main.91cbd1c8.js.map",
+    "static/js/2.8db2f731.chunk.js": "/dairy-cow-management/static/js/2.8db2f731.chunk.js",
+    "static/js/2.8db2f731.chunk.js.map": "/dairy-cow-management/static/js/2.8db2f731.chunk.js.map",
+    "index.html": "/dairy-cow-management/index.html",
+    "precache-manifest.42857ec6834d9f9d83380bc59d8c784b.js": "/dairy-cow-management/precache-manifest.42857ec6834d9f9d83380bc59d8c784b.js",
+    "service-worker.js": "/dairy-cow-management/service-worker.js",
+    "static/css/main.ddb60fc0.chunk.css.map": "/dairy-cow-management/static/css/main.ddb60fc0.chunk.css.map",
+    "static/js/2.8db2f731.chunk.js.LICENSE.txt": "/dairy-cow-management/static/js/2.8db2f731.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/css/main.52c18123.css",
-    "static/js/main.778723e4.js"
+    "static/js/runtime-main.91cbd1c8.js",
+    "static/js/2.8db2f731.chunk.js",
+    "static/css/main.ddb60fc0.chunk.css",
+    "static/js/main.b955bc2d.chunk.js"
   ]
 }
