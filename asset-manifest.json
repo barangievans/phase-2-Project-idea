@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/phase-2-Project-idea/static/css/main.52c18123.css",
+    "main.js": "/phase-2-Project-idea/static/js/main.778723e4.js",
+    "index.html": "/phase-2-Project-idea/index.html",
+    "main.52c18123.css.map": "/phase-2-Project-idea/static/css/main.52c18123.css.map",
+    "main.778723e4.js.map": "/phase-2-Project-idea/static/js/main.778723e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.52c18123.css",
+    "static/js/main.778723e4.js"
+  ]
+}
