@@ -1,26 +1,27 @@
 import React from 'react';
-import './CowList.css'; // Import the CSS file for styling
+import styles from './CowInventory.css'; // Ensure this path is correct
 
-const CowList = ({ cows }) => {
-  if (cows.length === 0) {
-    return <p>No cows available.</p>;
-  }
-
+const CowInventory = ({ cows }) => {
   return (
-    <div className="cow-list-container">
-      <table className="cow-list-table">
+    <div className={styles.container}>
+      <h2 className={styles.heading}>Cow Inventory</h2>
+      <table className={styles.table}>
         <thead>
           <tr>
             <th>ID</th>
+            <th>Image</th>
             <th>Name</th>
             <th>Breed</th>
-            <th>Age (Years)</th>
+            <th>Age</th>
           </tr>
         </thead>
         <tbody>
           {cows.map(cow => (
             <tr key={cow.id}>
               <td>{cow.id}</td>
+              <td>
+                <img src={cow.image} alt={cow.name} className={styles.image} />
+              </td>
               <td>{cow.name}</td>
               <td>{cow.breed}</td>
               <td>{cow.age}</td>
@@ -32,4 +33,4 @@ const CowList = ({ cows }) => {
   );
 };
 
-export default CowList;
+export default CowInventory;

@@ -6,6 +6,24 @@
   display: flex;
   justify-content: space-between;
 }
+/* Header.css */
+
+header {
+  text-align: center; 
+  padding: 20px;      
+  background-color: #f0f0f0; 
+  position: fixed;    /* Fix the header at the top of the page */
+  top: 0;             
+  width: 100%;        
+  z-index: 1000;
+}      
+
+header h1 {
+  margin: 0;          /* Remove default margin */
+  font-size: 2rem;    /* Adjust the font size */
+  color: #333;        /* Text color for better visibility */
+}
+
 
 .cow-inventory-container,
 .form-container {

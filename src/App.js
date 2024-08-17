@@ -1,61 +1,62 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
+import AddCowForm from './components/AddCowForm';
+import FinancialAnalysis from './components/FinancialAnalysis';
 import CowInventory from './components/CowInventory';
 import CowEmblem from './components/CowEmblem';
-import FinancialAnalysis from './components/FinancialAnalysis';
-import AddCowForm from './components/AddCowForm';
+import Home from './components/Home';
+import HealthRecords from './components/HealthRecords';
 import './App.css';
 
 const App = () => {
   const [cows, setCows] = useState([]);
 
-  // Replace the fetch call with static data for testing
   useEffect(() => {
-    const fetchCows = async () => {
-      try {
-        // Use hardcoded data for testing
-        const data = [
-          { id: "1", name: "Apollo", breed: "Holstein-Friesian", age: 4 },
-          { id: "2", name: "Ruby", breed: "Holstein-Friesian", age: 3 },
-          // Add more test data as needed
-        ];
-        setCows(data);
-      } catch (error) {
-        console.error('Error fetching cows:', error);
-      }
+    // Simulate fetching cow data
+    const fetchCows = () => {
+      const cowData = []; // Use actual data here
+      setCows(cowData);
     };
 
     fetchCows();
   }, []);
 
-  const addCow = async (cow) => {
-    try {
-      // For testing, add cow to state directly
-      const newCow = { id: (cows.length + 1).toString(), ...cow };
-      setCows(prevCows => [...prevCows, newCow]);
-    } catch (error) {
-      console.error('Error adding cow:', error);
-    }
+  const addCow = (cow) => {
+    setCows((prevCows) => [...prevCows, cow]);
   };
 
   return (
-    <div className="app-container">
+    <Router>
       <Header />
-      <CowEmblem />
       <div className="main-content">
-        <div className="cow-inventory-container">
-          <CowInventory cows={cows} onSelectCow={() => {}} />
-        </div>
-        <div className="form-container">
-          <AddCowForm onAdd={addCow} />
-        </div>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Home />
+              <CowEmblem />
+            </>
+          } />
+          <Route path="/cow-inventory" element={<CowInventory cows={cows} />} />
+          <Route path="/add-cow" element={<AddCowForm onAdd={addCow} />} />
+          <Route path="/financial-analysis" element={<FinancialAnalysis />} />
+          <Route path="/health-records" element={<HealthRecords />} />
+          <Route path="/test" element={<div>Test Page</div>} />
+        </Routes>
       </div>
-      <FinancialAnalysis />
-    </div>
+    </Router>
   );
 };
 
 export default App;
+
+
+
+
+
+
+
+
 
 
 

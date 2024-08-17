@@ -1,45 +1,52 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // Optional, for type checking
+import styles from './CowInventory.css'; // Ensure this path is correct
 
-// Inline style object
-const styles = {
-  container: {
-    textAlign: 'center',
-    padding: '20px',
-    border: '2px solid #ddd',
-    borderRadius: '8px',
-    backgroundColor: '#f9f9f9',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    margin: '20px',
-  },
-  heading: {
-    fontSize: '24px',
-    color: '#333',
-    marginBottom: '10px',
-  },
-  image: {
-    width: '150px',
-    height: 'auto',
-    borderRadius: '50%',
-    marginBottom: '10px',
-  },
-  description: {
-    fontSize: '18px',
-    color: '#666',
-  },
-};
-
-const CowEmblem = () => {
+const CowInventory = ({ cows = [] }) => {
   return (
-    <div style={styles.container}>
-      <img
-        src="/Cow Emblem.jpg"
-        alt="Cow Emblem"
-        style={styles.image}
-      />
-      <h2 style={styles.heading}>Cow Emblem</h2>
-      <p style={styles.description}>Our beloved emblem represents the quality and tradition of our dairy farm.</p>
+    <div className={styles.container}>
+      <h2>Cow Inventory</h2>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Breed</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cows.length > 0 ? (
+            cows.map(cow => (
+              <tr key={cow.id}>
+                <td>{cow.id}</td>
+                <td>
+                  {cow.image ? (
+                    <img src={cow.image} alt={cow.name} className={styles.image} />
+                  ) : (
+                    <span>No Image</span>
+                  )}
+                </td>
+                <td>{cow.name}</td>
+                <td>{cow.breed}</td>
+                <td>{cow.age}</td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="5">No cows available</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default CowEmblem;
+// Optional: Add prop types for better type checking
+CowInventory.propTypes = {
+  cows: PropTypes.array
+};
+
+export default CowInventory;
