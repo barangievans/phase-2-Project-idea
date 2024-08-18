@@ -1,32 +1,127 @@
+/* Container for the entire component */
 .financial-analysis {
-    padding: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Heading styles */
+h2 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+h3 {
+  color: #333;
+}
+
+/* Month Selector styles */
+.month-selector {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month-selector label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.month-selector select {
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.month-selector button {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.month-selector button:hover {
+  background-color: #45a049;
+}
+
+/* Input Section styles */
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.input-section th, .input-section td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.input-section th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.input-section tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.input-section tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Result Section styles */
+.result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Records Display styles */
+.records-display {
+  margin-top: 20px;
+}
+
+.records-display table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-display th, .records-display td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.records-display th {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.records-display tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.records-display tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .input-section table, .records-display table {
+    font-size: 0.9em;
   }
-  
-  table {
+
+  .month-selector button {
     width: 100%;
-    border-collapse: collapse;
+    padding: 15px;
   }
-  
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
-  
-  input[type="number"] {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-    margin-top: 5px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-  
+}

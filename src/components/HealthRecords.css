@@ -1,17 +1,62 @@
+/* Container for the entire component */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
 
+/* Heading styles */
 h2 {
   text-align: center;
   color: #333;
 }
 
-form {
+h3 {
+  color: #555;
+}
+
+/* List of health practices in column form */
+.healthList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding-left: 0; /* Remove default padding */
+  list-style-type: decimal; /* Use decimal style for ordered list */
+}
+
+.healthList li {
+  margin-bottom: 10px; /* Add space between list items */
+  padding-left: 20px; /* Add space for the list number */
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
   margin-bottom: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Form styles */
+form {
+  margin: 20px 0;
 }
 
 label {
@@ -20,102 +65,53 @@ label {
   font-weight: bold;
 }
 
-select,
-input[type="date"],
-input[type="number"] {
+select, input[type="date"], input[type="number"] {
   margin-top: 5px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: 5px;
+  font-size: 1em;
 }
 
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Button styles */
 button {
-  background-color: #007bff;
+  background-color: #4CAF50; /* Green background */
   color: white;
-  border: none;
   padding: 10px 20px;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  margin-top: 10px;
+  font-size: 1em;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #45a049;
 }
 
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-.table th,
-.table td {
-  padding: 12px;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
-.table th {
-  background-color: #f4f4f4;
-  font-weight: bold;
-}
-
-.table tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.table tbody tr:hover {
-  background-color: #f1f1f1;
-}
-
+/* Filter container styles */
 .filterContainer {
   margin-top: 20px;
-  text-align: center;
-}
-
-.filterContainer label {
-  display: inline-block;
-  margin-right: 10px;
 }
 
 .filterContainer select {
-  margin-right: 10px;
+  padding: 5px;
+  font-size: 1em;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
-  .table th,
-  .table td {
-    display: block;
+  .table {
+    font-size: 0.9em;
+  }
+
+  button {
     width: 100%;
-    box-sizing: border-box;
+    padding: 15px;
   }
 
-  .table thead {
-    display: none;
-  }
-
-  .table tr {
-    margin-bottom: 10px;
-    display: block;
-    border: 1px solid #ddd;
-  }
-
-  .table td {
-    position: relative;
-    padding-left: 50%;
-    text-align: right;
-  }
-
-  .table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 10px;
-    font-weight: bold;
-    text-align: left;
+  input[type="date"], input[type="number"], select {
+    width: 100%;
   }
 }

@@ -1,0 +1,66 @@
+/* src/components/About.css */
+
+/* Container for the whole component */
+.container {
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font family */
+    background-color: #f9f9f9; /* Light background color for better readability */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Header style */
+  h2 {
+    color: #2c3e50; /* Darker color for better readability */
+    margin-bottom: 20px;
+    font-size: 28px; /* Larger font size for prominence */
+    font-weight: 600; /* Semi-bold text for emphasis */
+    border-bottom: 2px solid #3498db; /* Blue underline for a modern touch */
+    padding-bottom: 10px;
+  }
+  
+  /* Paragraph styling */
+  p {
+    font-size: 18px; /* Larger font size for better readability */
+    line-height: 1.8; /* Increased line height for better readability */
+    margin-bottom: 20px;
+    color: #555; /* Slightly lighter text color for improved readability */
+  }
+  
+  /* List styling */
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* List item styling */
+  li {
+    font-size: 18px; /* Consistent with paragraph size */
+    margin-bottom: 10px;
+    color: #333; /* Dark color for list items */
+    padding-left: 10px; /* Indent to separate from bullet */
+  }
+  
+  /* Nested list styling */
+  ul ul {
+    list-style-type: circle;
+    padding-left: 30px;
+    margin-top: 10px; /* Space between nested lists */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px; /* Reduced padding for smaller screens */
+    }
+  
+    h2 {
+      font-size: 24px; /* Slightly smaller font size for headings on smaller screens */
+    }
+  
+    p, li {
+      font-size: 16px; /* Adjust font size for better readability on mobile */
+    }
+  }
+  

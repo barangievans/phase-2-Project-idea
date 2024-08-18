@@ -1,19 +1,18 @@
+// src/App.js
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Header from './components/Header';
-import AddCowForm from './components/AddCowForm';
 import FinancialAnalysis from './components/FinancialAnalysis';
 import CowInventory from './components/CowInventory';
-import CowEmblem from './components/CowEmblem';
-import Home from './components/Home';
 import HealthRecords from './components/HealthRecords';
+import Home from './components/Home';
+import About from './components/About'; // Import the About component
 import './App.css';
 
 const App = () => {
   const [cows, setCows] = useState([]);
 
   useEffect(() => {
-    // Simulate fetching cow data
     const fetchCows = () => {
       const cowData = []; // Use actual data here
       setCows(cowData);
@@ -22,26 +21,25 @@ const App = () => {
     fetchCows();
   }, []);
 
-  const addCow = (cow) => {
-    setCows((prevCows) => [...prevCows, cow]);
-  };
-
   return (
     <Router>
       <Header />
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/cow-inventory">Cow Inventory</Link></li>
+          <li><Link to="/health-records">Health Records</Link></li>
+          <li><Link to="/financial-analysis">Financial Analysis</Link></li>
+        </ul>
+      </nav>
       <div className="main-content">
         <Routes>
-          <Route path="/" element={
-            <>
-              <Home />
-              <CowEmblem />
-            </>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} /> {/* Route for About page */}
           <Route path="/cow-inventory" element={<CowInventory cows={cows} />} />
-          <Route path="/add-cow" element={<AddCowForm onAdd={addCow} />} />
-          <Route path="/financial-analysis" element={<FinancialAnalysis />} />
           <Route path="/health-records" element={<HealthRecords />} />
-          <Route path="/test" element={<div>Test Page</div>} />
+          <Route path="/financial-analysis" element={<FinancialAnalysis />} />
         </Routes>
       </div>
     </Router>
@@ -49,14 +47,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-

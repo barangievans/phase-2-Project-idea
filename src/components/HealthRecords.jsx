@@ -99,6 +99,19 @@ const HealthRecords = () => {
   return (
     <div className={styles.container}>
       <h2>Health Records</h2>
+      
+      {/* List of Health Practices */}
+      <p>Common Dairy Cow Health Management Practices offered:</p>
+      <ol className={styles.healthList}>
+        <li>Vaccination</li>
+        <li>Treatment</li>
+        <li>Routine Check-ups</li>
+        <li>Parasite Control</li>
+        <li>Regular Deworming</li>
+        <li>Animal Husbandry/Serving of Cows</li>
+        <li>Mature Heifers</li>
+      </ol>
+
       <form>
         <label>
           Select Cow:
@@ -153,7 +166,7 @@ const HealthRecords = () => {
                   </td>
                 </tr>
                 <tr>
-                  <td>Treated</td>
+                  <td>Treatment</td>
                   <td>
                     <input
                       type="checkbox"
@@ -321,7 +334,7 @@ const HealthRecords = () => {
               <tr>
                 <th>Cow Name</th>
                 <th>Vaccination</th>
-                <th>Treated</th>
+                <th>Treatment</th>
                 <th>Routine Check Up</th>
                 <th>Parasite Control</th>
                 <th>Deworming</th>

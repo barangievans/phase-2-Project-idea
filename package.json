@@ -1,31 +1,26 @@
 {
   "name": "dairy-cow-management",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.3.1",
-    "react-datepicker": "^7.3.0",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.1",
-    "react-scripts": "5.0.1",
-    "react-toastify": "^10.0.5",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "description": "Overview The Cow Management App is a React-based single-page application designed to manage a cow inventory. Built from scratch using create-react-app, this project incorporates seven React components and utilizes a JSON server to provide a RESTful API with GET and POST endpoints. The app is styled with custom CSS.",
+  "homepage": "http://localhost:3000/dairy-cow-management",
+  "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "server": "json-server --watch db.json --port 5000",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.26.1",
+    "react-scripts": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.24.7",
+    "gh-pages": "^6.1.1"
   },
   "browserslist": {
     "production": [
@@ -39,7 +34,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "json-server": "^1.0.0-beta.1"
-  }
+  "author": "",
+  "license": "ISC",
+  "keywords": []
 }
