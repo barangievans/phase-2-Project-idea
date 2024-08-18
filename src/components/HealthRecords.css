@@ -1,62 +1,29 @@
-/* Container for the entire component */
+/* HealthRecords.css */
+
+/* General container styling */
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
 
-/* Heading styles */
+/* Header styling */
 h2 {
-  text-align: center;
-  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-h3 {
-  color: #555;
-}
-
-/* List of health practices in column form */
+/* List of health practices */
 .healthList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
-  padding-left: 0; /* Remove default padding */
-  list-style-type: decimal; /* Use decimal style for ordered list */
+  list-style-type: disc;
+  margin: 10px 0;
+  padding-left: 20px;
 }
 
-.healthList li {
-  margin-bottom: 10px; /* Add space between list items */
-  padding-left: 20px; /* Add space for the list number */
-}
-
-/* Table styles */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-.table th, .table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-.table th {
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-.table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.table tr:hover {
-  background-color: #f1f1f1;
-}
-
-/* Form styles */
+/* Form and select elements styling */
 form {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 label {
@@ -65,53 +32,74 @@ label {
   font-weight: bold;
 }
 
-select, input[type="date"], input[type="number"] {
-  margin-top: 5px;
+select {
   padding: 5px;
-  font-size: 1em;
+  margin-top: 5px;
+  font-size: 1rem;
 }
 
 input[type="checkbox"] {
   margin-right: 10px;
 }
 
-/* Button styles */
+input[type="date"],
+input[type="number"] {
+  padding: 5px;
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button styling */
 button {
-  background-color: #4CAF50; /* Green background */
-  color: white;
   padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1em;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 
-/* Filter container styles */
+/* Filter container styling */
 .filterContainer {
   margin-top: 20px;
 }
 
-.filterContainer select {
-  padding: 5px;
-  font-size: 1em;
+.filterContainer label {
+  font-weight: bold;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .table {
-    font-size: 0.9em;
-  }
-
-  button {
-    width: 100%;
-    padding: 15px;
-  }
-
-  input[type="date"], input[type="number"], select {
-    width: 100%;
-  }
+.filterContainer select {
+  padding: 5px;
+  font-size: 1rem;
 }

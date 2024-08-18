@@ -1,16 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './HealthRecords.css'; // Ensure this path is correct
 
-const sampleCows = [
-  { id: "1", name: "Apollo", breed: "Holstein-Friesian" },
-  { id: "2", name: "Ruby", breed: "Holstein-Friesian" },
-  { id: "3", name: "Bessie", breed: "Holstein-Friesian" },
-  { id: "4", name: "Daisy", breed: "Jersey" },
-  // Add more cow entries as needed
-];
-
 const HealthRecords = () => {
-  const [cows] = useState(sampleCows);
+  const [cows, setCows] = useState([]);
   const [selectedCow, setSelectedCow] = useState(null);
   const [vaccinationDate, setVaccinationDate] = useState('');
   const [vaccinationCost, setVaccinationCost] = useState('');
@@ -34,6 +26,23 @@ const HealthRecords = () => {
 
   const [recordsByMonth, setRecordsByMonth] = useState({});
   const [selectedMonth, setSelectedMonth] = useState('');
+
+  useEffect(() => {
+    const fetchCows = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/cows');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setCows(data);
+      } catch (error) {
+        console.error('Failed to fetch cows:', error);
+      }
+    };
+
+    fetchCows();
+  }, []);
 
   const handleCowChange = (event) => {
     const selectedId = event.target.value;
