@@ -58,3 +58,4 @@ Contributing
 Submit issues or pull requests for bug fixes or feature requests.
 
 For more details, please refer to the documentation or contact the maintainer.
+Hosted link to my project: https://phase-2-project-idea-git-master-barangi-evans-projects.vercel.app/
